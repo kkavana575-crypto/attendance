@@ -2,6 +2,10 @@
 <html>
 <head>
     <title>Attendance Planner</title>
+
+    <!-- ⭐ MOBILE SCREEN FIX (VERY IMPORTANT) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -39,7 +43,6 @@
 
 </div>
 
-
 <!-- MAIN SCRIPT -->
 <script src="script.js"></script>
 
@@ -48,12 +51,8 @@
 <script type="module">
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-import {
-  getFirestore,
-  doc,
-  setDoc,
-  getDoc
-} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+import { getFirestore, doc, setDoc, getDoc }
+from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 
 const firebaseConfig = {
@@ -82,3 +81,4 @@ window.doc = doc;
 
 </body>
 </html>
+
