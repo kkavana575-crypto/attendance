@@ -138,51 +138,75 @@ tr:nth-child(even){
 /* ===============================
    MOBILE RESPONSIVE DESIGN
 ================================= */
+/* ==============================
+MOBILE RESPONSIVE (COMFORT SIZE)
+================================ */
 
 @media (max-width: 768px){
 
+/* page spacing */
 body{
-    padding:15px;
-    align-items:flex-start;
+padding:12px;
 }
 
-.container{
-    width:90%;
-    padding:25px;
-}
-
+/* containers fill screen */
+.container,
 .planner-container{
-    width:100%;
-    padding:15px;
+width:100%;
+max-width:100%;
+padding:18px;
+border-radius:16px;
 }
 
+/* title readable */
 .planner-title{
-    font-size:20px;
+font-size:22px;
+margin-bottom:10px;
 }
 
+/* buttons finger friendly */
 button{
-    width:100%;
-    font-size:14px;
-    padding:10px;
+font-size:16px;
+padding:14px;
 }
 
-th, td{
-    font-size:14px;
-    padding:4px;
-}
-
-.present, .absent{
-    font-size:16px;
-}
-
-.bottom-buttons{
-    flex-direction:column;
-    gap:10px;
-}
-
+/* table scroll smooth */
 .table-wrapper{
-    overflow-x:auto;
-    -webkit-overflow-scrolling:touch;
+overflow-x:auto;
 }
 
-}   /* ⭐ THIS WAS MISSING */
+/* table width comfortable */
+table{
+min-width:700px;
+}
+
+/* headers readable */
+th{
+font-size:15px;
+padding:8px 6px;
+}
+
+/* cells touch friendly */
+td{
+font-size:17px;
+padding:10px 8px;
+min-width:36px;
+}
+
+/* attendance symbols big */
+.present,
+.absent{
+font-size:20px;
+}
+
+/* bottom buttons stacked */
+.bottom-buttons{
+flex-direction:column;
+gap:12px;
+}
+
+.bottom-buttons button{
+width:100%;
+}
+
+}
