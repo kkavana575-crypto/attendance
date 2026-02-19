@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap');
+
+/* ---------- BODY ---------- */
+body {
+    margin: 0;
+    font-family: 'Fredoka', sans-serif;
+    background: linear-gradient(135deg,#3A86FF,#FFAFCC);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 30px;
+}
+
+/* ---------- FIRST PAGE ---------- */
+.container {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* ---------- BUTTONS ---------- */
+button {
+    font-family: 'Fredoka', sans-serif;
+    display: block;
+    width: 220px;
+    margin: 12px auto;   
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: #ff6fb5;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    background:#ff4fa3;
+    transform: scale(1.05);
+}
+
+/* ---------- DASHBOARD CONTAINER ---------- */
+.planner-container {
+    width: 95%;
+    max-width: 1200px;
+    background: #fff0f6;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* ---------- TITLE ---------- */
+.planner-title {
+    text-align: center;
+    color: #ff6fb5;
+}
+
+/* ---------- MODE BAR ---------- */
+.mode-bar {
+    text-align: center;
+    margin: 15px;
+}
+
+/* ---------- TABLE WRAPPER ---------- */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+/* ---------- TABLE ---------- */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* ---------- HEADER ---------- */
+th {
+    background:#ffd6e7;
+    padding:8px;
+}
+
+/* ---------- CELLS ---------- */
+td {
+    padding:6px;
+    text-align:center;
+    font-size:18px;
+    cursor:pointer;
+}
+
+/* alternate rows */
+tr:nth-child(even){
+    background:#f8f9ff;
+}
+
+/* ---------- ATTENDANCE HOVER ---------- */
+.attendance-box:hover {
+    background:#ffe4f0;
+    transform: scale(1.1);
+    transition:0.15s ease;
+}
+
+/* ---------- PRESENT ---------- */
+.present {
+    color:green;
+    font-weight:bold;
+    animation: pop 0.2s ease;
+}
+
+/* ---------- ABSENT ---------- */
+.absent {
+    color:#ff0033;
+    font-weight:bold;
+    font-size:20px;
+    text-shadow:0 0 3px rgba(255,0,51,0.4);
+    animation: pop 0.2s ease;
+}
+
+/* ---------- POP ANIMATION ---------- */
+@keyframes pop {
+    0% { transform: scale(0.6); }
+    100% { transform: scale(1); }
+}
+
+/* ---------- WARNING ROW ---------- */
+.warning {
+    background:#ffd6d6 !important;
+}
+
+/* ---------- BOTTOM BUTTONS ---------- */
+.bottom-buttons {
+    display:flex;
+    justify-content:space-between;
+    margin-top:20px;
+}
+
+/* ===============================
+   MOBILE RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 768px){
+
+body{
+    padding:15px;
+    align-items:flex-start;
+}
+
+.container{
+    width:90%;
+    padding:25px;
+}
+
+.planner-container{
+    width:100%;
+    padding:15px;
+}
+
+.planner-title{
+    font-size:20px;
+}
+
+button{
+    width:100%;
+    font-size:14px;
+    padding:10px;
+}
+
+th, td{
+    font-size:14px;
+    padding:4px;
+}
+
+.present, .absent{
+    font-size:16px;
+}
+
+.bottom-buttons{
+    flex-direction:column;
+    gap:10px;
+}
+
+.table-wrapper{
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+}
+
+}   /* ⭐ THIS WAS MISSING */

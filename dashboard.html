@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="planner-container">
+
+    <h2 class="planner-title">My Attendance Planner 🌸</h2>
+
+    <div class="mode-bar">
+        <button id="modeBtn" onclick="toggleMode()">Mode: ✔ Present</button>
+    </div>
+
+    <div class="table-wrapper">
+        <table id="attendanceTable">
+            <thead>
+                <tr>
+                    <th>Subjects</th>
+                    <th colspan="45">Date</th>
+                    <th>Attended</th>
+                    <th>%</th>
+                </tr>
+                <tr id="dateRow">
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="subjectRows"></tbody>
+        </table>
+    </div>
+
+    <!-- ⭐ ONLY BACK BUTTON -->
+    <div class="bottom-buttons">
+        <button onclick="goBack()">Back</button>
+    </div>
+
+</div>
+
+
+<!-- MAIN SCRIPT -->
+<script src="script.js"></script>
+
+
+<!-- ================= FIREBASE CONNECTION ================= -->
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import {
+  getFirestore,
+  doc,
+  setDoc,
+  getDoc
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDGGZV3kPdGksGRb2cnkOrKwv0qtARnqrE",
+  authDomain: "attedance-c49b9.firebaseapp.com",
+  projectId: "attedance-c49b9",
+  storageBucket: "attedance-c49b9.firebasestorage.app",
+  messagingSenderId: "322850696658",
+  appId: "1:322850696658:web:738cd6602cf76cee53ac0b",
+  measurementId: "G-LLLVVJ17L3"
+};
+
+
+/* ---------- INIT FIREBASE ---------- */
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+
+/* ---------- MAKE FIREBASE GLOBAL ---------- */
+window.db = db;
+window.setDoc = setDoc;
+window.getDoc = getDoc;
+window.doc = doc;
+
+</script>
+
+</body>
+</html>

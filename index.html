@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Who is this bitch?</h1>
+
+    <button onclick="selectUser('pandi')">Pandi</button>
+    <button onclick="selectUser('kk')">KK</button>
+    <button onclick="selectUser('manju')">Manju</button>
+</div>
+
+<script>
+function selectUser(name){
+    localStorage.setItem("selectedUser", name);   // ⭐ VERY IMPORTANT
+    window.location.href = "dashboard.html?user=" + name;
+}
+</script>
+
+</body>
+</html>
