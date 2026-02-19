@@ -2,6 +2,10 @@
 <html>
 <head>
     <title>Attendance Tracker</title>
+
+    <!-- ⭐ MOBILE SCREEN FIX -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -17,10 +21,16 @@
 
 <script>
 function selectUser(name){
-    localStorage.setItem("selectedUser", name);   // ⭐ VERY IMPORTANT
+    localStorage.setItem("selectedUser", name);
     window.location.href = "dashboard.html?user=" + name;
 }
 </script>
 
 </body>
 </html>
+
+</script>
+
+</body>
+</html>
+
