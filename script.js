@@ -27,7 +27,7 @@ window.addEventListener("load", initPage);
 
 async function initPage(){
 
-    const totalDays = 45;
+    const totalDays = 60;
     const user = localStorage.getItem("selectedUser");
     if(!user) return;
 
